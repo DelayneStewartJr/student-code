@@ -16,6 +16,7 @@ class DiscountCalculator {
         // Prompt the user for a discount amount
         // The answer needs to be saved as a double
         System.out.print("Enter the discount amount (w/out percentage): ");
+        double discount = Double.parseDouble(scanner.nextLine() )
 
 
 

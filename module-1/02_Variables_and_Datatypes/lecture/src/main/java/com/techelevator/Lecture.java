@@ -85,7 +85,8 @@ public class Lecture {
 		/*
 		16. Create a variable to hold "Saw" and add a 2 onto the end of it.
 		*/
-
+					String movieName = "Saw" + 2;
+		System.out.println();
 		/*
 		17. Add a 0 onto the end of the variable from exercise 16.
 		*/
@@ -93,7 +94,7 @@ public class Lecture {
 		/*
 		18. What is 4.4 divided by 2.2?
 		*/
-
+		System.out.println( 4.4 / 2.2);
 		/*
 		19. What is 5.4 divided by 2?
 		*/
