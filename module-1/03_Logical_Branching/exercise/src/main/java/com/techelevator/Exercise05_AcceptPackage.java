@@ -25,7 +25,7 @@ public class Exercise05_AcceptPackage {
      */
     public boolean acceptPackage(int weightPounds) {
         boolean isAccepted = false;
-        if(weightPounds) <= MAX_WEIGHT_POUNDS;
+        if (weightPounds) <= MAX_WEIGHT_POUNDS;
                 isAccepted = true;
 
         return isAccepted;

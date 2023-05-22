@@ -25,7 +25,12 @@ public class Exercise03_ShippingTotal {
      * calculateShippingRate(45) ➔ 0.75
      */
     public double calculateShippingRate(int weightPounds) {
-        return 0.0;
+        double shippingRate = .50;
+
+        if ( weightPounds > 40 ){
+            shippingRate = .75;
+        }
+        return shippingRate;
     }
 
     /*
@@ -43,7 +48,11 @@ public class Exercise03_ShippingTotal {
      * calculateShippingTotal(45) ➔ 33.75
      */
     public double calculateShippingTotal(int weightPounds) {
-        return 0.0;
+        double rate = calculateShippingRate(weightPounds)
+        double totalCost = weightPounds * rate;
+
+
+        return totalCost;
     }
 
     /*
@@ -65,6 +74,10 @@ public class Exercise03_ShippingTotal {
      * calculateShippingTotal(45, true) ➔ 30.375
      */
     public double calculateShippingTotal(int weightPounds, boolean hasDiscount) {
+        double shippingTotal = calculateShippingTotal(weightPounds);
+
+        shippingTotal = shippingTotal * .90;
+        shippingTotal
         return 0.0;
     }
 

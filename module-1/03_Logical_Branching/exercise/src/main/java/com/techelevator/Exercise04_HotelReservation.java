@@ -65,6 +65,11 @@ public class Exercise04_HotelReservation {
     calculateStayTotal(3, true, true) ➔ 364.97
      */
     public double calculateStayTotal(int numOfTotalNights, boolean includesParking, boolean includesLateCheckout) {
-        return 0.0;
+        double stayTotal = calculateStayTotal(numOfTotalNights, includesParking);
+
+        if (includesLateCheckout){
+            stayTotal = stayTotal + LATE_CHECKOUT_FEE;
+        }
+        return stayTotal;
     }
 }

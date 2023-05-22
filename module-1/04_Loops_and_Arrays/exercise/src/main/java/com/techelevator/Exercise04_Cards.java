@@ -64,7 +64,9 @@ public class Exercise04_Cards {
         int adjustedSize = 0;
 
 
-        String 
+        String[] New
+
+        String
         return new String[] {};
     }    
 }
