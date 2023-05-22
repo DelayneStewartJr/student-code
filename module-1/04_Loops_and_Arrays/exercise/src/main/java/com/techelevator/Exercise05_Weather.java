@@ -25,6 +25,12 @@ public class Exercise05_Weather {
 	belowFreezing([]) → 0
     */
 	public int belowFreezing(int[] dailyHighs) {
+        int numberOfDaysFreezingAndBelow = ;
+        int FREEZING_TEMPERATURE = 32
+
+
+        for (i = 0; i < dailyHighs.length; i++)
+
 		return 0;
 	}
 

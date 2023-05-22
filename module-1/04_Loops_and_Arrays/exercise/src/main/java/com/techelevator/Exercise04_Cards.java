@@ -61,6 +61,10 @@ public class Exercise04_Cards {
     discardTopCard([]) → []
      */
     public String[] discardTopCard(String[] remainingDeck) {
+        int adjustedSize = 0;
+
+
+        String 
         return new String[] {};
     }    
 }
