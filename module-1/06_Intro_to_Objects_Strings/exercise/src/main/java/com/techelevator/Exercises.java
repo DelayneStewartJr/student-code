@@ -20,6 +20,8 @@ public class Exercises {
 	 makeAbba("What", "Up") → "WhatUpUpWhat"
 	 */
 	public String makeAbba(String a, String b) {
+		String result =
+
 		return null;
 	}
 
