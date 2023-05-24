@@ -19,7 +19,7 @@ Enter a series of Earth weights (space-separated): 98 235 185
 public class MartianWeight {
 
 	public static void main(String[] args) {
-		
+
 
 
 
