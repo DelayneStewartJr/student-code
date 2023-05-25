@@ -16,7 +16,12 @@ public class Exercises {
 	 array2List( {"Left", "Right", "Forward", "Back"} )  ->  ["Left", "Right", "Forward", "Back"]
 	 */
 	public List<String> array2List(String[] stringArray) {
-		return null;
+		List<String> fruitList = new ArrayList<>();
+
+		for (int i = 0; i < stringArray.length; i++){
+			fruitList.add(stringArray[i]);
+	}
+		return fruitList;
 	}
 
 	/*
@@ -26,7 +31,10 @@ public class Exercises {
 	 list2Array( ["Left", "Right", "Forward", "Back"] )  ->  {"Left", "Right", "Forward", "Back"}
 	 */
 	public String[] list2Array(List<String> stringList) {
-		return null;
+		String[] fruitList = stringList.toArray(new String[0]);
+		for (int i = 0; i < fruitList.length; i++){
+	}
+		return fruitList;
 	}
 
 	/*
@@ -37,7 +45,12 @@ public class Exercises {
 	 no4LetterWords( {"Jack", "Jill", "Jane", "John", "Jim"} )  ->  ["Jim"]
 	 */
 	public List<String> no4LetterWords(String[] stringArray) {
-		return null;
+		List<String> no4LetterWordList = new ArrayList<>();
+			for (int i = 0; i < stringArray.length; i++)
+				if (stringArray [i].length() !=4){
+					no4LetterWordList.add(stringArray[i]);
+				}
+		return no4LetterWordList;
 	}
 
 	/*
@@ -47,6 +60,8 @@ public class Exercises {
 	 arrayInt2ListDouble( {84, 99, 3285, 13, 877} ) -> [42, 49.5, 1642.5, 6.5, 438.5]
 	 */
 	public List<Double> arrayInt2ListDouble(int[] intArray) {
+
+
 		return null;
 	}
 
@@ -57,7 +72,13 @@ public class Exercises {
 	 findLargest( [34070, 1380, 81238, 7782, 234, 64362, 627] ) -> 81238
 	 */
 	public Integer findLargest(List<Integer> integerList) {
-		return null;
+		Integer largestValue = 0;
+			for (Integer currentInteger : integerList){
+				if (currentInteger > largestValue){
+					largestValue = currentInteger;
+				}
+			}
+		return largestValue;
 	}
 
 	/*
@@ -78,6 +99,8 @@ public class Exercises {
 	 foundIntTwice( [9, 9, 44, 2, 88, 9], 9) -> true
 	 */
 	public boolean foundIntTwice(List<Integer> integerList, int intToFind) {
+
+
 		return false;
 	}
 
