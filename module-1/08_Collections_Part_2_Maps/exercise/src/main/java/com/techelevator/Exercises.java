@@ -35,8 +35,28 @@ public class Exercises {
 	 */
 	public String animalGroupName(String animalName) {
 
+		Map<String, String> animalGroups = new HashMap<>();
 
-		return null;
+		animalGroups.put("rhino", "Crash");
+		animalGroups.put("giraffe", "Tower");
+		animalGroups.put("elephant", "Herd");
+		animalGroups.put("lion", "Pride");
+		animalGroups.put("crow", "Murder");
+		animalGroups.put("pigeon", "Kit");
+		animalGroups.put("flamingo", "Pat");
+		animalGroups.put("deer", "Herd");
+		animalGroups.put("dog", "Pack");
+		animalGroups.put("crocodile", "Float");
+
+		if(animalName == null) {
+			return "unknown";
+		}
+			if(animalGroups.containsKey(animalName.toLowerCase())){
+				return animalGroups.get(animalName.toLowerCase());
+		}else{
+				return "unknown";
+			}
+
 	}
 
 	/*
@@ -62,9 +82,21 @@ public class Exercises {
 	 *
 	 */
 	public double isItOnSale(String itemNumber) {
-		return -1.0;
-	}
+		Map<String, Double> saleItems = new HashMap<>();
 
+		saleItems.put("KITCHEN4001", 0.20);
+		saleItems.put("GARAGE1070", 0.15);
+		saleItems.put("LIVINGROOM", 0.10);
+		saleItems.put("KITCHEN6073", 0.40);
+		saleItems.put("BEDROOM3434", 0.60);
+		saleItems.put("BATH0073", 0.15);
+
+		if (itemNumber != null && saleItems.containsKey(itemNumber.toUpperCase())) {
+			return saleItems.get(itemNumber.toUpperCase());
+		} else {
+			return -0.00;
+		}
+	}
 	/*
 	 * Modify and return the given Map as follows: if "Peter" has more than 0 money, transfer half of it to "Paul",
 	 * but only if Paul has less than $10s.
@@ -78,6 +110,7 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
+
 		return null;
 	}
 
@@ -106,7 +139,12 @@ public class Exercises {
 	 * beginningAndEnding(["muddy", "good", "moat", "good", "night"]) → {"g": "d", "m": "t", "n": "t"}
 	 */
 	public Map<String, String> beginningAndEnding(String[] words) {
-		return null;
+		Map<String, String> firstAndLast = new HashMap<>();
+			for (String firstLetters : words){
+			firstAndLast.put(firstLetters.substring(0, 1), (firstLetters.substring(firstLetters.length() - 1)));
+		}
+
+		return firstAndLast;
 	}
 
 	/*
@@ -122,9 +160,16 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
-		return null;
-	}
+		Map<String, Integer> numberedWord = new HashMap<>();
 
+		for (String word : words)
+			if (!numberedWord.containsKey(word)) {
+				numberedWord.put(word, 1);
+			} else {
+				numberedWord.put(word, numberedWord.get(word) + 1);
+			}
+		return numberedWord;
+		}
 	/*
 	 * Given an array of int values, return a Map<Integer, Integer> with a key for each int, with the value the
 	 * number of times that int appears in the array.
@@ -137,7 +182,16 @@ public class Exercises {
 	 *
 	 */
 	public Map<Integer, Integer> integerCount(int[] ints) {
-		return null;
+		Map<Integer, Integer> numberOfNumbers = new HashMap<>();
+
+		for (Integer newInteger : ints)
+			if (!numberOfNumbers.containsKey(newInteger)) {
+				numberOfNumbers.put(newInteger, 1);
+			} else {
+				numberOfNumbers.put(newInteger, numberOfNumbers.get(newInteger) + 1);
+			}
+		return numberOfNumbers;
+
 	}
 
 	/*
@@ -150,6 +204,8 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Boolean> wordMultiple(String[] words) {
+
+
 		return null;
 	}
 
