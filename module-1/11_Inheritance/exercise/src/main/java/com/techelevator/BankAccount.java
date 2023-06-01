@@ -20,6 +20,7 @@ public class BankAccount {
     public BankAccount(String accountHolderName, String accountNumber){
         this.accountHolderName = accountHolderName;
         this.accountNumber = accountNumber;
+        this.balance = 0;
     }
 
     public BankAccount(String accountHolderName, String accountNumber, int balance){
@@ -29,10 +30,12 @@ public class BankAccount {
     }
 
 // Methods
-    public deposit(int amountToDeposit);{
-        return
+    public int deposit(int amountToDeposit){
+        balance = balance + amountToDeposit;
+        return balance;
     }
-    public withdraw(int amountToWithdraw);{
-        return
+    public int withdraw(int amountToWithdraw){
+        balance = balance - amountToWithdraw;
+        return balance;
     }
 }
