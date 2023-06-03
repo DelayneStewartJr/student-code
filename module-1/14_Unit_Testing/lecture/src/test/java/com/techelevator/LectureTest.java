@@ -100,4 +100,19 @@ public class LectureTest {
 	public void this_method_is_not_a_test_because_it_does_not_have_the_Test_annotation() {
 		// This method will not be run by Junit, because it's not a test
 	}
+
+	@Test
+	public void test_first_two(){
+		//Arrange
+		Lecture lectureStringEx = new Lecture();
+		String expected = "He";
+		String provided = "Hello";
+
+		//Act
+		String actual = lectureStringEx.firstTwo(expected);
+
+	}
+
+
+
 }
