@@ -50,7 +50,7 @@ public class FileReadingLab {
         }
         // Count the words and sentences
         int wordCount = 0;
-        int sentenceCount = 0;
+        int sentenceCount = 0
         try (Scanner inputScanner = new Scanner(inputFile)){
             while (inputScanner.hasNextLine()) { // 3. Replace true with correct code
                 String line = inputScanner.nextLine(); //4. Replace "" with correct code

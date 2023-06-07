@@ -20,6 +20,9 @@ public class Lecture {
 		 * A new instance of File can be created from a String that contains a file system path
 		 */
 
+			System.out.println("Enter the path of a file of directory");
+			String path = userInput.nextLine();
+			File file = new File(path);
 
 
 
@@ -30,7 +33,11 @@ public class Lecture {
 		/* ***************************
 		 * INSPECTING THE FILESYSTEM
 		 * ***************************/
+			System.out.println();
+			if(file.exists()){
 
+
+			}
 
 
 

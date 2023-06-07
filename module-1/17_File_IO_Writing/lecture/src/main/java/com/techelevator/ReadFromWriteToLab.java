@@ -1,5 +1,6 @@
 package com.techelevator;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
@@ -19,13 +20,21 @@ public class ReadFromWriteToLab {
             /** Your code goes here */
 
             //1.  Prompt user for the search word to remove  - handle if user input is empty
+            System.out.println("Enter search word to remove");
+            String removeWord = userInput.nextLine();
+            File searchWord = new File(removeWord);
 
 
             //2.  Prompt user for the location of the source file
-
+            System.out.println("Enter location of file");
+            String fileLocation = userInput.nextLine();
+            File sourceFile = new File(fileLocation);
 
             //3.  Validate the input source file.  Tools to consider: if, else if, exists() and isFile() methods
 
+                if (!sourceFile.exists());{
+
+            }
 
             //4.  Prompt user for the location of the destination file - handle IF user input is empty
 
