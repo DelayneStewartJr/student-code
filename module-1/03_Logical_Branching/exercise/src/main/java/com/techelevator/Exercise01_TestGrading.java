@@ -19,7 +19,6 @@ public class Exercise01_TestGrading {
      */
     public boolean gradeTestPassFail(int score) {
         boolean result = false;
-        result + (score >= 70 )
         return result;
     }
 

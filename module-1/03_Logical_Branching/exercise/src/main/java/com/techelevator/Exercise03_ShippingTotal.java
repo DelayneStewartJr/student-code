@@ -48,7 +48,7 @@ public class Exercise03_ShippingTotal {
      * calculateShippingTotal(45) ➔ 33.75
      */
     public double calculateShippingTotal(int weightPounds) {
-        double rate = calculateShippingRate(weightPounds)
+        double rate = calculateShippingRate(weightPounds);
         double totalCost = weightPounds * rate;
 
 
@@ -77,7 +77,7 @@ public class Exercise03_ShippingTotal {
         double shippingTotal = calculateShippingTotal(weightPounds);
 
         shippingTotal = shippingTotal * .90;
-        shippingTotal
+
         return 0.0;
     }
 

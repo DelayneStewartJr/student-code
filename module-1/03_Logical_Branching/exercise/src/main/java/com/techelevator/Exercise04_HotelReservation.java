@@ -26,9 +26,8 @@ public class Exercise04_HotelReservation {
     calculateStayTotal(3) ➔ 269.97
      */
     public double calculateStayTotal(int numberOfNights) {
-        double stayTotal =
+        double stayTotal = 0;
 
-                ( includesLate)
 
         return stayTotal;
     }
