@@ -43,10 +43,8 @@ public class Exercise01_StoreOrders {
 	 createOrder() → [10, 40, 31, 41]
      */
     public int[] createOrder() {
-        return new int[4] {
-                order[]
-        };
-    }
+        return null;
+        }
 
     /*
     Sally realized that she needed to know how many calzones her shop sells per day.
