@@ -38,10 +38,6 @@ public class FizzWriter {
 
 				}
 
-
-
-
-
 			} catch (FileNotFoundException e){
 				System.out.println("Invalid destination file");
 			}

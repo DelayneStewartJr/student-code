@@ -26,12 +26,15 @@ public class Exercise04_HotelReservation {
     calculateStayTotal(3) ➔ 269.97
      */
     public double calculateStayTotal(int numberOfNights) {
-        double stayTotal = 0;
+        if (numberOfNights < 1) {
+            return 0.0; // Invalid input, return 0
+        } else if (numberOfNights <= 2) {
+            return DAILY_RATE * numberOfNights;
+        } else {
+            return DISCOUNT_RATE * numberOfNights;
+        }
 
-
-        return stayTotal;
     }
-
     /*
     The owners of Innovator's Inn offer parking at an additional cost of $25.00 per night.
     Calculate the stay total based on the number of nights (int) 

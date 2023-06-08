@@ -78,7 +78,7 @@ public class Exercise03_ShippingTotal {
 
         shippingTotal = shippingTotal * .90;
 
-        return 0.0;
+        return shippingTotal;
     }
 
 }
