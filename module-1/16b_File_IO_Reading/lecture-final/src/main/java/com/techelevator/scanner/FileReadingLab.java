@@ -32,7 +32,7 @@ public class FileReadingLab {
 
         // Get the path of the user input file
         File inputFile;
-        while (true) {
+        while (true) ;{
             System.out.println("What is the file that should be searched?");
 
             String path = userInput.nextLine(); // 1. Update path with correct code; what tool can you use to capture user input from the keyboard

@@ -88,7 +88,15 @@ public class Exercises {
 	 oddOnly( {734, 233, 782, 811, 3, 9999} ) -> [233, 811, 3, 9999]
 	 */
 	public List<Integer> oddOnly(Integer[] integerArray) {
-		return null;
+		List<Integer> oddList = new ArrayList<>();
+
+		for (Integer num : integerArray) {
+			if (num % 2 != 0) {
+				oddList.add(num);
+			}
+		}
+
+		return oddList;
 	}
 
 	/*
@@ -99,7 +107,16 @@ public class Exercises {
 	 foundIntTwice( [9, 9, 44, 2, 88, 9], 9) -> true
 	 */
 	public boolean foundIntTwice(List<Integer> integerList, int intToFind) {
+		int count = 0;
 
+		for (int num : integerList) {
+			if (num == intToFind) {
+				count++;
+				if (count >= 2) {
+					return true;
+				}
+			}
+		}
 
 		return false;
 	}
