@@ -2,3 +2,9 @@
 -- Order the results by actor from oldest to youngest.
 -- (20 rows)
 
+SELECT DISTINCT person.person_name, person.birthday
+FROM person
+JOIN movie_actor ON person.person_id = movie_actor.actor_id
+JOIN movie ON movie_actor.movie_id = movie.movie_id
+WHERE (person.birthday BETWEEN '1/1/1950' AND '12/31/1959') AND (movie.release_date BETWEEN '1/1/1985' AND '12/31/1985')
+ORDER BY person.birthday;

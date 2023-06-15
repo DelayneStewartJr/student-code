@@ -2,3 +2,11 @@
 -- Order the results alphabetically by movie title.
 -- (4 rows)
 
+SELECT movie.title, movie.tagline
+FROM person
+JOIN movie_actor ON person.person_id = movie_actor.actor_id
+JOIN movie ON movie_actor.movie_id = movie.movie_id
+JOIN movie_genre ON movie.movie_id = movie_genre.movie_id
+JOIN genre ON movie_genre.genre_id = genre.genre_id
+WHERE genre.genre_name = 'Family' AND person.person_name = 'Samuel L. Jackson'
+ORDER BY movie.title;
