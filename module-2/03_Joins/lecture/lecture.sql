@@ -1,7 +1,9 @@
 -- INNER JOIN
 
 -- Write a query to retrieve the name and state abbreviation for the 2 cities named "Columbus" in the database
-
+SELECT city_name, state_abbreviation
+FROM city
+WHERE city_name ='Columbus'
 
 -- Modify the previous query to retrieve the names of the states (rather than their abbreviations).
 
@@ -52,13 +54,7 @@
 -- After creating the MovieDB database and running the setup script, make sure it is selected in pgAdmin and confirm it is working correctly by writing queries to retrieve...
 
 -- The names of all the movie genres
-SELECT genre_name
-FROM genre;
+
 
 -- The titles of all the Comedy movies
-SELECT movie.title, genre.genre_name 
-FROM movie
-JOIN movie_genre ON movie.movie_id = movie_genre.movie_id
-JOIN genre ON movie_genre.genre_id = genre.genre_id
-WHERE genre_name = 'Comedy';
 
