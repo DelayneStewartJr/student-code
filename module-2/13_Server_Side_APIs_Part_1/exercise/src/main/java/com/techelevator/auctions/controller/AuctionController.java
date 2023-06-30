@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-//@RequestMapping("/auctions")
+@RequestMapping("/auctions")
 public class AuctionController {
 
     private AuctionDao auctionDao;
@@ -17,20 +17,20 @@ public class AuctionController {
         this.auctionDao = new MemoryAuctionDao();
     }
 
-    @GetMapping("/auctions")
+    @GetMapping()
     public List<Auction> list() {
         List<Auction> auctionList = auctionDao.getAuctions();
         return auctionList;
     }
 
-    @GetMapping("/auctions/{id}")
+    @GetMapping("{id}")
     public Auction get(@PathVariable int id) {
         Auction auction = auctionDao.getAuctionById(id);
         return auction;
     }
 
 
-    @PostMapping("/auctions")
+    @PostMapping()
     public Auction addReservation(@RequestBody Auction auction){
         Auction newAuction = auctionDao.createAuction(auction);
         return newAuction;
