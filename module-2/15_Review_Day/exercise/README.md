@@ -54,7 +54,7 @@ Once you provide implementation for those endpoints and return properly formatte
 
 ### Database
 
-The Database team provided you with a script to create a local database and the DAO files to retrieve the data. You can implement your code without reviewing the implementation details of the DAO files. The interface provides you with enough information to complete your tasks.
+The Database team provided you with a script to create a local database and the DAO files - (create, update, and delete methods). You need to create the 2 DAO methods that retrieve the data. You can implement the rest of your code without reviewing the implementation details of the DAO files. The interface provides you with enough information to complete your tasks.
 
 ### Cat data API
 
