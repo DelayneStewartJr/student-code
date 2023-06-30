@@ -8,7 +8,7 @@ import com.techelevator.reservations.model.Hotel;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@RestController
 public class HotelController {
 
     private HotelDao hotelDao;

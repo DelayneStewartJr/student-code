@@ -47,7 +47,7 @@ public class HotelController {
     }
 
 
-    /**
+    /*n
      * Returns all reservations in the system
      *
      * @return all reservations
