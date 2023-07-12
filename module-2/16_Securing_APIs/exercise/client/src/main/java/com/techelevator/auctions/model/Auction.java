@@ -68,4 +68,8 @@ public class Auction {
         return "Auction{" + "id=" + id + ", title='" + title + '\'' + ", description='" + description + '\''
                 + ", user='" + user + '\'' + ", currentBid=" + currentBid + '}';
     }
+
+
+
+
 }
