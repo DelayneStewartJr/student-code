@@ -9,9 +9,52 @@ html {
 
 body {
   background-color: rgba(192, 192, 192, 0.1);
+  border-spacing: 1px;
+
+  
 }
 
 ul {
   margin: 0;
   padding: 0;
+}
+
+aside > img{
+  height: 120px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+aside{ 
+  position: fixed;
+  border-right-color: 1px solid rgba(0, 173, 238, 0.4); 
+  height:100% ;
+  width:200px ;
+  
+}
+
+main{
+  margin-left: 20px ;
+  margin-right:20px ;
+  padding: 200px ;
+}
+
+ul > li{
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 173, 238, 0.4);
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+  padding: 20px;
+}
+
+header >img{
+  height: 100px;
+  padding: bottom 10px; ;
+}
+
+li:first-child{
+  text-decoration: underline;
 }
