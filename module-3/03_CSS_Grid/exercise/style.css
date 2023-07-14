@@ -13,6 +13,79 @@ body {
     background-color: rgba(192, 192, 192, 0.1);
 }
 
+#main-grid{
+    display: grid;
+    grid-template-areas: 
+        "linehead linehead picture"
+        "quote quote picture"
+        "profile profile contact"
+        "experience experience experience";
+
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 50px;
+    align-items: center;
+}
+
+#student-picture, #student-contact{
+    text-align: center;
+}
+
+#headline{
+    grid-area: linehead;
+}
+
+#student-picture{
+    grid-area: picture;
+}
+
+#student-quote{
+    grid-area: quote;
+}
+
+#student-profile{
+    grid-area: profile;
+}
+
+#student-contact{
+    grid-area: contact;
+}
+
+#experience-grid{
+    grid-area: experience;
+}
+
+
+#experience-grid{
+    display: grid;
+    grid-template-areas:
+    "code code"
+    "data data"
+    "web design";
+
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 50px;
+    grid-area: experience;
+}
+
+#experience-code{
+    grid-area: code;
+}
+
+#experience-web{
+    grid-area: web;
+}
+
+#experience-database{
+    grid-area: data;
+}
+
+#experience-design{
+    grid-area: design;
+}
+
+
 h1 {
     font-size: 2em;
 }
