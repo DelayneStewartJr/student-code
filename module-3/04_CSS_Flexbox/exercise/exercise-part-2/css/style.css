@@ -94,6 +94,20 @@ nav a:hover {
   border-radius: 10px;
 }
 
+body{
+  display: flex;
+}
+
+.social-icons{
+  flex-grow: 1;
+}
+
+#left-panel{
+  display: flex;
+  flex-basis: 35%;
+  flex-direction: column;
+}
+
 @media(max-width: 1024px) {
 
   h1,
