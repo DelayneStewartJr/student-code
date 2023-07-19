@@ -5,13 +5,18 @@
 		sumDouble(1, 2) → 3
 		sumDouble(3, 2) → 5
 		sumDouble(2, 2) → 8
-
-		function sumDouble(x, y) {
-			// do logic here
-			// return result;
-			return x + y;
-        }
 */
+		function sumDouble(x, y) {
+			if (x===y) {
+				return (x + y) * 2	;
+
+			}else{
+
+				return (x + y)	;
+			}
+				
+        }
+
 
 /*
 2. **hasTeen** We'll say that a number is "teen" if it is in the range 13..19 inclusive. 
@@ -21,6 +26,11 @@
 		hasTeen(20, 19, 10) → true
 		hasTeen(20, 10, 13) → true
 */
+		function hasTeen(x, y, z){
+				return null
+		}
+
+
 
 /* 
 3. **lastDigit** Given two non-negative int values, return true if they have the same 
@@ -31,6 +41,16 @@
 		lastDigit(3, 113) → true
 */
 
+		function lastDigit(x, y){
+			sameLastDigits = x % 10 === y % 10;{
+
+			}
+				return sameLastDigits;
+		}
+
+
+
+
 /*
 4. **seeColor** Given a string, if the string begins with "red" or "blue" return that color 
     string, otherwise return the empty string.
@@ -39,6 +59,17 @@
 		seeColor("xxred") → ""
         seeColor("blueTimes") → "blue"
 */
+			function seeColor(str){
+				if (str.startswith("red")){
+					return "red";
+				} else if (str.startswith("blue")){
+					return "blue";
+				}
+						return "";
+			}
+			
+		
+
 
 /*
 5. **oddOnly** Write a function that given an array of integer of any length, removes
@@ -47,6 +78,17 @@
 		oddOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]) → [1, 3, 5, 7, 9, 11];
 		oddOnly([2, 4, 8, 32, 256]); → []
 */
+
+			function oddOnly (intArray){
+				let newArray = [];
+					return newArray;
+			}
+			
+				
+
+
+
+
 
 /*
 6. **frontAgain** Given a string, return true if the first 2 chars in the string also appear 
@@ -82,6 +124,24 @@ In all other cases return the original number.
 	fizzBuzz(15) → "FizzBuzz"
 	fizzBuzz(8) → 8
 */
+
+			function fizzBuzz (x){
+				let givenNumber = x
+				if(x % 15 == 0){
+					return "FizzBuzz";
+
+				} else if ( x % 5 == 0){
+
+					return "Buzz";
+
+				}else if (x % 3 == 0){
+
+					return "Fizz";
+					
+				}
+					return givenNumber;
+			}
+
 
 /*
 9. **filterEvens** Write a function that filters an array to only include even numbers.
@@ -120,3 +180,12 @@ firstName, lastName, and age. Populate the properties with your values.
 		age
 	}
 */
+
+			function createObject(){
+				const person = {
+					firstName: "Bob",
+					lastName: "Builder",
+					age: 10
+				}
+				return person;
+			}
