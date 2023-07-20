@@ -60,9 +60,9 @@
         seeColor("blueTimes") → "blue"
 */
 			function seeColor(str){
-				if (str.startswith("red")){
+				if (str.startsWith("red")){
 					return "red";
-				} else if (str.startswith("blue")){
+				} else if (str.startsWith("blue")){
 					return "blue";
 				}
 						return "";
@@ -151,6 +151,20 @@ In all other cases return the original number.
 	filterEvens([2, 4, 6]) → [2, 4, 6]
 	filterEvens([100, 8, 21, 24, 62, 9, 7]) → [100, 8, 24, 62]
 */
+
+
+			// function filterEvens(evenNum){
+			// 	const evens = [];
+			// 	result = evenNum.filter(evens => evens % 2);{
+			// 			if ( evens.length % 3){
+
+			// 				return evens[''];
+						
+			// 		}
+
+			// 				return result;
+			// }
+
 
 /*
 10. **filterBigNumbers** Write a function that filters numbers greater than or equal to 100.
