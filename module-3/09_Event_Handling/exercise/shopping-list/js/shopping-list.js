@@ -35,4 +35,32 @@ function displayGroceries() {
     li.appendChild(checkCircle);
     ul.appendChild(li);
   });
+
 }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    setPageTitle();
+    displayGroceries();
+ 
+    const listItem = document.querySelectorAll('ul > li');
+
+    listItem.forEach((shoppingList) => {
+      shoppingList.addEventListener('click', (event) => {
+       if (!shoppingList.classList.contains('completed')){
+            shoppingList.classList.add('completed');
+            shoppingList.querySelector('i').classList.add('completed');
+       }
+      });
+      
+      shoppingList.addEventListener('dblclick', (event) => {
+        if (shoppingList.classList.contains('completed')){
+             shoppingList.classList.add('completed');
+             shoppingList.querySelector('i').classList.add('completed')
+        }  
+
+      });
+
+    });
+    
+  });
+
