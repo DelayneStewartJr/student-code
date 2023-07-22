@@ -72,7 +72,16 @@ function clear() {
 }
 
 // add event listener for when the DOM is loaded
-document.addEventListener('LOADED_EVENT_GOES_HERE', () => {
+document.addEventListener('DOMContentLoaded', () => {
+  function performOperation();
+  function parseNumber(num);
+  function clickOperator(event);
+  function clickNumber(event);
+  function clear();
+
+
+
+
 
   // set the variable called display declared at the top of this file equal to the display element
   // HINT: use its id #display to get a reference to it

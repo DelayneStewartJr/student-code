@@ -12,7 +12,6 @@ const groceries = [
   { id: 9, name: 'Salad', completed: false },
   { id: 10, name: 'Tea', completed: false }
 ];
-
 /**
  * This function will get a reference to the title and set its text to the value
  * of the pageTitle variable that was set above.
@@ -21,7 +20,6 @@ function setPageTitle() {
   const title = document.getElementById('title');
   title.innerText = pageTitle;
 }
-
 /**
  * This function will loop over the array of groceries that was set above and add them to the DOM.
  */
@@ -35,32 +33,44 @@ function displayGroceries() {
     li.appendChild(checkCircle);
     ul.appendChild(li);
   });
-
 }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    setPageTitle();
-    displayGroceries();
- 
-    const listItem = document.querySelectorAll('ul > li');
-
-    listItem.forEach((shoppingList) => {
-      shoppingList.addEventListener('click', (event) => {
-       if (!shoppingList.classList.contains('completed')){
-            shoppingList.classList.add('completed');
-            shoppingList.querySelector('i').classList.add('completed');
-       }
-      });
-      
-      shoppingList.addEventListener('dblclick', (event) => {
-        if (shoppingList.classList.contains('completed')){
-             shoppingList.classList.remove('completed');
-             shoppingList.querySelector('i').classList.remove('completed')
-        }  
-
-      });
-
+function toggleAll(event){
+  const allItems = document.querySelectorAll('li');
+  if(allItemsIncomplete){
+    allItems.forEach((item) => {
+      item.classList.add('completed');
     });
-    
+    allItemsIncomplete = false;
+    event.innerText = 'Mark All Incomplete';
+  }else{
+    allItems.forEach((item) => {
+      item.classList.remove('completed');
+    });
+    allItemsIncomplete = true;
+    event.innerText = 'Mark All Complete';
+  }
+}
+document.addEventListener('DOMContentLoaded', () => {
+  setPageTitle();
+  displayGroceries();
+  // toggleAll();
+  const listItem = document.querySelectorAll('ul > li');
+  listItem.forEach((item) => {
+    item.addEventListener('click', (event) => {
+      if (!item.classList.contains('completed')){
+        item.classList.add('completed');
+        item.querySelector('i').classList.add('completed');
+        }
+    });
+    item.addEventListener('dblclick', (event) => {
+      if (item.classList.contains('completed')){
+        item.classList.remove('completed');
+        item.querySelector('i').classList.remove('completed');
+        }
+    });
   });
-
+  const toggleAll1 = document.querySelector('.btn');
+  toggleAll1.addEventListener('click', (event) => {
+    toggleAll(event.currentTarget);
+  });
+});
