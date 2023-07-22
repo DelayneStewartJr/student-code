@@ -54,8 +54,8 @@ function displayGroceries() {
       
       shoppingList.addEventListener('dblclick', (event) => {
         if (shoppingList.classList.contains('completed')){
-             shoppingList.classList.add('completed');
-             shoppingList.querySelector('i').classList.add('completed')
+             shoppingList.classList.remove('completed');
+             shoppingList.querySelector('i').classList.remove('completed')
         }  
 
       });
