@@ -3,6 +3,13 @@ body{ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: tan;
 }
 
+header {
+    text-align: center;
+}
 
+main img{
+    text-align: center;
+    width: 300px;
 
+}
 
