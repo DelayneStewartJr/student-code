@@ -104,7 +104,6 @@ function frontAgain(string) {
 	 let lastchar = string.length - 2;
 	 	if( firstchar === lastchar){
 		 	
-			
 		} 
 	  			return true;
 	}		  
