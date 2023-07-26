@@ -99,6 +99,17 @@
 		frontAgain("ed") → true
 */
 
+function frontAgain(string) {
+	 let firstchar = string.substring (0,2);
+	 let lastchar = string.length - 2;
+	 	if( firstchar === lastchar){
+		 	
+			
+		} 
+	  			return true;
+	}		  
+
+	
 /*
 7. **cigarParty** When squirrels get together for a party, they like to have cigars. 
 A squirrel party is successful when the number of cigars is between 40 and 60, inclusive. 
