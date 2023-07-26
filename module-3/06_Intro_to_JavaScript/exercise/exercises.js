@@ -163,18 +163,17 @@ In all other cases return the original number.
 */
 
 
-			// function filterEvens(evenNum){
-			// 	const evens = [];
-			// 	result = evenNum.filter(evens => evens % 2);{
-			// 			if ( evens.length % 3){
-
-			// 				return evens[''];
-						
-			// 		}
-
-			// 				return result;
-			// }
-
+			function filterEvens(evenNum){
+				const evens = [];
+				let i;
+				for ( i = 0; i < evenNum.length; i++){
+					if (evenNum[i] % 2 == 0) {
+						evens.push(evenNum[i]);
+					}
+					
+				}
+					return evens
+			}
 
 /*
 10. **filterBigNumbers** Write a function that filters numbers greater than or equal to 100.
