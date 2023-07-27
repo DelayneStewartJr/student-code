@@ -36,6 +36,46 @@
       </div>
     </div>
 
+    <form>
+        <div class= "form element">
+          <label for= "reviewer" > Name:</label> 
+          <input id= "reviewer" type= "text" />
+        </div> 
+
+        <div class="form-element">
+          <label for="title">Title</label>
+          <input id="title" type="text" />
+        </div>
+
+        <div class="form-element">
+          <label for="rating">Rating</label>
+          <input id="title" type="text" />
+        </div>
+
+        <div class="form-element">
+          <label for="rating">Rating</label>
+          <select id="rating" type="text" />
+            <option value = "1"> 1 Star</option>
+            <option value = "1"> 1 Star</option>
+            <option value = "1"> 1 Star</option>
+            <option value = "1"> 1 Star</option>
+            <option value = "1"> 1 Star</option>
+        </div>
+
+        <div class="form-element">
+          <label for="review">Review</label>
+          <textarea id="review" />
+        </div>
+
+          <input type="submit" value="Save" />
+          <input type= 
+
+
+        
+
+
+    <form/>
+
     <div
       class="review"
       v-bind:class="{ favorited: review.favorited }"
