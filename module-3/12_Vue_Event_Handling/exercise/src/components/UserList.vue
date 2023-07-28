@@ -44,7 +44,7 @@
           v-bind:class="{ deactivated: user.status === 'Inactive' }"
         >
           <td>
-            <input type="checkbox" v-bind:id="user.id" v-bind:value="user.id" />
+            <input type="checkbox" v-bind:id="user.id" v-bind:value="user.id" v-model="checkedUsers" />
           </td>
           <td>{{ user.firstName }}</td>
           <td>{{ user.lastName }}</td>
@@ -52,36 +52,36 @@
           <td>{{ user.emailAddress }}</td>
           <td>{{ user.status }}</td>
           <td>
-            <button class="btnActivateDeactivate">Activate or Deactivate</button>
+            <button class="btnActivateDeactivate" v-on:click="statusToggle(user.id)" >{{ user.status ==='Active' ? 'Deactivate' : 'Activate' }}</button>
           </td>
         </tr>
       </tbody>
     </table>
 
     <div class="all-actions">
-      <button>Activate Users</button>
-      <button>Deactivate Users</button>
-      <button>Delete Users</button>
+      <button v-bind:disabled="!checkedUsers.length">Activate Users</button>
+      <button v-bind:disabled="!checkedUsers.length">Deactivate Users</button>
+      <button v-bind:disabled="!checkedUsers.length">Delete Users</button>
     </div>
 
-    <button>Add New User</button>
+    <button v-on:click="showForm = !showForm">Add New User</button>
 
-    <form id="frmAddNewUser">
+    <form id="frmAddNewUser" v-on:submit.prevent="addNewUser" v-show="showForm===true">
       <div class="field">
         <label for="firstName">First Name:</label>
-        <input type="text" name="firstName" />
+        <input v-bind="firstName" type="text" name="firstName" />
       </div>
       <div class="field">
         <label for="lastName">Last Name:</label>
-        <input type="text" name="lastName" />
+        <input v-bind="lastName" type="text" name="lastName" />
       </div>
       <div class="field">
         <label for="username">Username:</label>
-        <input type="text" name="username" />
+        <input v-bind="username" type="text" name="username" />
       </div>
       <div class="field">
         <label for="emailAddress">Email Address:</label>
-        <input type="text" name="emailAddress" />
+        <input v-bind="emailAddress" type="text" name="emailAddress" />
       </div>
       <button type="submit" class="btn save">Save User</button>
     </form>
@@ -93,12 +93,15 @@ export default {
   name: "user-list",
   data() {
     return {
+      showForm: false,
+      checkedUsers: [],
+
       filter: {
         firstName: "",
         lastName: "",
         username: "",
         emailAddress: "",
-        status: ""
+        status: "",
       },
       nextUserId: 7,
       newUser: {
@@ -107,7 +110,7 @@ export default {
         lastName: "",
         username: "",
         emailAddress: "",
-        status: "Active"
+        status: "Active",
       },
       users: [
         {
@@ -116,7 +119,7 @@ export default {
           lastName: "Smith",
           username: "jsmith",
           emailAddress: "jsmith@gmail.com",
-          status: "Active"
+          status: "Active",
         },
         {
           id: 2,
@@ -124,7 +127,7 @@ export default {
           lastName: "Bell",
           username: "abell",
           emailAddress: "abell@yahoo.com",
-          status: "Active"
+          status: "Active",
         },
         {
           id: 3,
@@ -132,7 +135,7 @@ export default {
           lastName: "Best",
           username: "gbest",
           emailAddress: "gbest@gmail.com",
-          status: "Inactive"
+          status: "Inactive",
         },
         {
           id: 4,
@@ -140,7 +143,7 @@ export default {
           lastName: "Carter",
           username: "bcarter",
           emailAddress: "bcarter@gmail.com",
-          status: "Active"
+          status: "Active",
         },
         {
           id: 5,
@@ -148,7 +151,7 @@ export default {
           lastName: "Jackson",
           username: "kjackson",
           emailAddress: "kjackson@yahoo.com",
-          status: "Active"
+          status: "Active",
         },
         {
           id: 6,
@@ -156,15 +159,37 @@ export default {
           lastName: "Smith",
           username: "msmith",
           emailAddress: "msmith@foo.com",
-          status: "Inactive"
-        }
-      ]
+          status: "Inactive",
+        },
+      ],
     };
   },
   methods: {
     getNextUserId() {
       return this.nextUserId++;
+    },
+    addNewUser() {
+      this.newUser.id = this.getNextUserId();
+      this.users.push(this.newUser);
+      this.formReset();
+    },
+
+    formReset(){
+      this.newUser = {};
+      this.showForm = false;
+    },
+
+    statusToggle(id){
+      let userIndex = this.users.findIndex((user) =>
+        user.id == id
+      ); 
+        if(this.users[userIndex].status === "Active"){
+            this.users[userIndex].status = "Inactive";
+        } else {
+            this.users[userIndex].status = "Active";
+        }
     }
+  
   },
   computed: {
     filteredList() {
@@ -198,13 +223,13 @@ export default {
         );
       }
       if (this.filter.status != "") {
-        filteredUsers = filteredUsers.filter((user) =>
-          user.status === this.filter.status
+        filteredUsers = filteredUsers.filter(
+          (user) => user.status === this.filter.status
         );
       }
       return filteredUsers;
-    }
-  }
+    },
+  },
 };
 </script>
 
