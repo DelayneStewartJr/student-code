@@ -32,7 +32,11 @@ export default new Vuex.Store({
       }
     ]
   },
-  mutations: {},
+  mutations: {
+    FLIP_STATUS(state,payload){
+      payload.book.read = !payload.value;
+    }
+  },
   actions: {},
   modules: {},
   // Strict should not be used in production code. It is used here as a
