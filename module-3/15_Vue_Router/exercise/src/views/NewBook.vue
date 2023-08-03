@@ -8,7 +8,7 @@
 import NewBookForm from '../components/NewBookForm.vue'
 
 export default {
-    component:{
+    components:{
         NewBookForm
     }
 
